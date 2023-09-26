@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+git config --global user.name "grader"
+git config --global user.email "grader@grader.com"
+git config --global init.defaultBranch "main"
+
+jupyter server extension list
+jupyter labextension list

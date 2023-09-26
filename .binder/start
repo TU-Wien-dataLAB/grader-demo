@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+pwd
+mkdir "./grader_service_dir"
+export GRADER_SERVICE_DIRECTORY="grader_service_dir"
+export JUPYTERHUB_API_TOKEN="1234"
+export JUPYTERHUB_API_URL="http://127.0.0.1:4010"
+
+grader-service-migrate
+grader-service &
+
+sleep 1
+
+echo "$@"
+exec "$@"

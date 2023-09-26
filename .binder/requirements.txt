@@ -8,16 +8,28 @@ alembic==1.12.0
     # via grader-service
 anyio==4.0.0
     # via jupyter-server
+appnope==0.1.3
+    # via
+    #   ipykernel
+    #   ipython
 argon2-cffi==23.1.0
     # via jupyter-server
 argon2-cffi-bindings==21.2.0
     # via argon2-cffi
 arrow==1.2.3
     # via isoduration
+asttokens==2.4.0
+    # via stack-data
+async-lru==2.0.4
+    # via jupyterlab
 attrs==23.1.0
     # via
     #   jsonschema
     #   referencing
+babel==2.12.1
+    # via jupyterlab-server
+backcall==0.2.0
+    # via ipython
 beautifulsoup4==4.12.2
     # via nbconvert
 bleach==6.0.0
@@ -34,14 +46,23 @@ cffi==1.15.1
     #   cryptography
 charset-normalizer==3.2.0
     # via requests
+comm==0.1.4
+    # via ipykernel
 cryptography==41.0.4
     # via grader-service
+debugpy==1.8.0
+    # via ipykernel
+decorator==5.1.1
+    # via ipython
 defusedxml==0.7.1
     # via nbconvert
 exceptiongroup==1.1.3
     # via
     #   anyio
+    #   ipython
     #   pytest
+executing==1.2.0
+    # via stack-data
 fastjsonschema==2.18.0
     # via nbformat
 fqdn==1.5.1
@@ -61,16 +82,26 @@ idna==3.4
     #   requests
 iniconfig==2.0.0
     # via pytest
+ipykernel==6.25.2
+    # via jupyterlab
+ipython==8.15.0
+    # via ipykernel
 isodate==0.6.1
     # via grader-service
 isoduration==20.11.0
     # via jsonschema
+jedi==0.19.0
+    # via ipython
 jinja2==3.1.2
     # via
     #   jupyter-server
+    #   jupyterlab
+    #   jupyterlab-server
     #   nbconvert
 json5==0.9.14
-    # via grader-service
+    # via
+    #   grader-service
+    #   jupyterlab-server
 jsonpointer==2.4
     # via jsonschema
 jsonschema[format-nongpl]==4.19.1
@@ -78,30 +109,50 @@ jsonschema[format-nongpl]==4.19.1
     #   grader-convert
     #   grader-service
     #   jupyter-events
+    #   jupyterlab-server
     #   nbformat
 jsonschema-specifications==2023.7.1
     # via jsonschema
 jupyter-client==8.3.1
     # via
     #   grader-convert
+    #   ipykernel
     #   jupyter-server
     #   nbclient
 jupyter-core==5.3.1
     # via
     #   grader-convert
+    #   ipykernel
     #   jupyter-client
     #   jupyter-server
+    #   jupyterlab
     #   nbclient
     #   nbconvert
     #   nbformat
 jupyter-events==0.7.0
     # via jupyter-server
+jupyter-lsp==2.2.0
+    # via jupyterlab
 jupyter-server==2.7.3
-    # via grader-labextension
+    # via
+    #   grader-labextension
+    #   jupyter-lsp
+    #   jupyterlab
+    #   jupyterlab-server
+    #   notebook
+    #   notebook-shim
 jupyter-server-terminals==0.4.4
     # via jupyter-server
+jupyterlab==4.0.6
+    # via
+    #   -r requirements.in
+    #   notebook
 jupyterlab-pygments==0.2.2
     # via nbconvert
+jupyterlab-server==2.25.0
+    # via
+    #   jupyterlab
+    #   notebook
 kubernetes==28.1.0
     # via grader-service
 mako==1.2.4
@@ -111,6 +162,10 @@ markupsafe==2.1.3
     #   jinja2
     #   mako
     #   nbconvert
+matplotlib-inline==0.1.6
+    # via
+    #   ipykernel
+    #   ipython
 mistune==3.0.1
     # via nbconvert
 nbclient==0.8.0
@@ -125,6 +180,14 @@ nbformat==5.9.2
     #   jupyter-server
     #   nbclient
     #   nbconvert
+nest-asyncio==1.5.8
+    # via ipykernel
+notebook==7.0.4
+    # via -r requirements.in
+notebook-shim==0.2.3
+    # via
+    #   jupyterlab
+    #   notebook
 oauthlib==3.2.2
     # via
     #   kubernetes
@@ -133,21 +196,38 @@ overrides==7.4.0
     # via jupyter-server
 packaging==23.1
     # via
+    #   ipykernel
     #   jupyter-server
+    #   jupyterlab
+    #   jupyterlab-server
     #   nbconvert
     #   pytest
 pandocfilters==1.5.0
     # via nbconvert
+parso==0.8.3
+    # via jedi
+pexpect==4.8.0
+    # via ipython
+pickleshare==0.7.5
+    # via ipython
 platformdirs==3.10.0
     # via jupyter-core
 pluggy==1.3.0
     # via pytest
 prometheus-client==0.17.1
     # via jupyter-server
+prompt-toolkit==3.0.39
+    # via ipython
+psutil==5.9.5
+    # via ipykernel
 psycopg2-binary==2.9.7
     # via grader-service
 ptyprocess==0.7.0
-    # via terminado
+    # via
+    #   pexpect
+    #   terminado
+pure-eval==0.2.2
+    # via stack-data
 pyasn1==0.5.0
     # via
     #   pyasn1-modules
@@ -157,7 +237,9 @@ pyasn1-modules==0.3.0
 pycparser==2.21
     # via cffi
 pygments==2.16.1
-    # via nbconvert
+    # via
+    #   ipython
+    #   nbconvert
 pyjwt==2.8.0
     # via grader-service
 pytest==7.4.2
@@ -176,6 +258,7 @@ pyyaml==6.0.1
     #   kubernetes
 pyzmq==25.1.1
     # via
+    #   ipykernel
     #   jupyter-client
     #   jupyter-server
 referencing==0.30.2
@@ -185,6 +268,7 @@ referencing==0.30.2
     #   jupyter-events
 requests==2.31.0
     # via
+    #   jupyterlab-server
     #   kubernetes
     #   requests-oauthlib
 requests-oauthlib==1.3.1
@@ -207,6 +291,7 @@ send2trash==1.8.2
     # via jupyter-server
 six==1.16.0
     # via
+    #   asttokens
     #   bleach
     #   grader-service
     #   isodate
@@ -223,6 +308,8 @@ sqlalchemy==1.4.46
     #   grader-convert
     #   grader-service
     #   tornado-sqlalchemy
+stack-data==0.6.2
+    # via ipython
 terminado==0.17.1
     # via
     #   jupyter-server
@@ -230,31 +317,43 @@ terminado==0.17.1
 tinycss2==1.2.1
     # via nbconvert
 tomli==2.0.1
-    # via pytest
+    # via
+    #   jupyterlab
+    #   pytest
 tornado==6.3.3
     # via
     #   grader-convert
     #   grader-service
+    #   ipykernel
     #   jupyter-client
     #   jupyter-server
+    #   jupyterlab
+    #   notebook
     #   terminado
     #   tornado-sqlalchemy
 tornado-sqlalchemy==0.7.0
     # via grader-service
-traitlets==5.10.0
+traitlets==5.9.0
     # via
+    #   -r requirements.in
+    #   comm
     #   grader-convert
     #   grader-service
+    #   ipykernel
+    #   ipython
     #   jupyter-client
     #   jupyter-core
     #   jupyter-events
     #   jupyter-server
+    #   jupyterlab
+    #   matplotlib-inline
     #   nbclient
     #   nbconvert
     #   nbformat
 typing-extensions==4.8.0
     # via
     #   alembic
+    #   async-lru
     #   grader-service
 uri-template==1.3.0
     # via jsonschema
@@ -264,6 +363,8 @@ urllib3==1.26.16
     #   grader-service
     #   kubernetes
     #   requests
+wcwidth==0.2.6
+    # via prompt-toolkit
 webcolors==1.13
     # via jsonschema
 webencodings==0.5.1
