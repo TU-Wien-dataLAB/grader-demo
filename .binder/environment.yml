@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+dependencies:
+  - git
+  - pip:
+      - grader-service==0.2.3
+      - grader-labextension==0.2.7
+      - traitlets==5.9.0
+      - jupyterlab==4.0.6
+      - notebook==7.0.4
