@@ -9,11 +9,9 @@ Access this Binder at the following URL
 http://mybinder.org/v2/gh/binder-examples/requirements/HEAD
 
 ## Notes
-The `requirements.txt` file should list all Python libraries that your notebooks
-depend on, and they will be installed using:
-
-```
-pip install -r requirements.txt
+Build image with:
+``` bash
+jupyter-repo2docker  --debug --Repo2Docker.base_image="docker.io/library/buildpack-deps:focal" . 
 ```
 
 The base Binder image contains no extra dependencies, so be as

@@ -2,15 +2,16 @@
 
 set -e
 
-pwd
 mkdir "./grader_service_dir"
-export GRADER_SERVICE_DIRECTORY="grader_service_dir"
+export GRADER_SERVICE_DIRECTORY="$(pwd)/grader_service_dir"
 export JUPYTERHUB_API_TOKEN="1234"
 export JUPYTERHUB_API_URL="http://127.0.0.1:4010"
 
-# TODO: start server on "http://127.0.0.1:8081/hub/api" that returns valid jupyterhub user json for grader service
+python3 .binder/hub_auth_mock.py &
 
+cd grader_service_dir
 grader-service-migrate
+cd ..
 grader-service -f .binder/grader_service_config.py &
 
 sleep 2
