@@ -1,6 +1,7 @@
 channels:
   - conda-forge
 dependencies:
+  - python=3.10
   - git
   - pip:
       - grader-service==0.2.3
