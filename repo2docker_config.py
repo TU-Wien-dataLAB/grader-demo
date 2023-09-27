@@ -1,0 +1,1 @@
+c.Repo2Docker.base_image="docker.io/library/buildpack-deps:focal"

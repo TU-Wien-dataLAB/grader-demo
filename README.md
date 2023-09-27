@@ -11,8 +11,10 @@ http://mybinder.org/v2/gh/binder-examples/requirements/HEAD
 ## Notes
 Build image with:
 ``` bash
-jupyter-repo2docker  --debug --Repo2Docker.base_image="docker.io/library/buildpack-deps:focal" . 
+jupyter-repo2docker  --debug . 
 ```
+
+Binder runs on https://binder.jupyter.hpc.tuwien.ac.at/
 
 The base Binder image contains no extra dependencies, so be as
 explicit as possible in defining the packages that you need. This includes
