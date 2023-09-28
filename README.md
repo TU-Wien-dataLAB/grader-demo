@@ -1,36 +1,11 @@
-# Python environment with a requirements.txt
+# Grader Service Demo Environment
 
-[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/requirements/HEAD)
+In this JupyterLab environment you can try out the [Grader Service](https://github.com/TU-Wien-dataLAB/Grader-Service) without any setup or configuration on your part. 
+You can create assignments, see how students can solve and submit them and see how auto-grading and manual-grading works (for you own submissions).
 
-A Binder-compatible repo with a `requirements.txt` file.
+To get started check out the [Official Documentation](https://grader-service.readthedocs.io/en/latest/index.html) (especially the [Instructor Guide](https://grader-service.readthedocs.io/en/latest/instructor_guide.html#) and [Student Guide](https://grader-service.readthedocs.io/en/latest/student_guide.html))!
+It will teach you the basics and you can try it out right here!
 
-Access this Binder at the following URL
-
-http://mybinder.org/v2/gh/binder-examples/requirements/HEAD
-
-## Notes
-Build image with:
-``` bash
-jupyter-repo2docker  --debug . 
-```
-
-Binder runs on https://binder.jupyter.hpc.tuwien.ac.at/
-
-The base Binder image contains no extra dependencies, so be as
-explicit as possible in defining the packages that you need. This includes
-specifying explicit versions wherever possible.
-
-If you do specify strict versions, it is important to do so for *all*
-your dependencies, not just direct dependencies.
-Strictly specifying only some dependencies is a recipe for environments
-breaking over time.
-
-[pip-compile](https://github.com/jazzband/pip-tools/) is a handy
-tool for combining loosely specified dependencies with a fully frozen environment.
-You write a requirements.in with just the dependencies you need
-and pip-compile will generate a requirements.txt with all the strict packages and versions that would come from installing that package right now.
-That way, you only need to specify what you actually know you need,
-but you also get a snapshot of your environment.
-
-In this example we include the library `seaborn` which will be installed in
-the environment, and our notebook uses it to plot a figure.
+If you don't want to create your own example assignment, we created a `Prime Example.ipynb` file for you.
+Just copy and paste it into your assignments source folder!
+ 
