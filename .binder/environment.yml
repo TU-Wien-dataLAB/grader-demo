@@ -42,6 +42,6 @@ dependencies:
   - vim
   - git
   - pip:
-      - grader-service==0.2.4
-      - grader-labextension==0.2.7
+      - grader-service==0.2.5
+      - grader-labextension==0.2.8
       - traitlets==5.9.0
