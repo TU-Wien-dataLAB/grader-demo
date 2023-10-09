@@ -11,3 +11,6 @@ jupyter labextension list
 
 ls -la
 ls -la .binder
+
+mkdir "/srv/conda/envs/notebook/share/jupyter/lab/settings"
+cp .binder/overrides.json /srv/conda/envs/notebook/share/jupyter/lab/settings/overrides.json
