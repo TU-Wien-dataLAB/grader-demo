@@ -43,5 +43,5 @@ dependencies:
   - git
   - pip:
       - grader-service==0.2.5
-      - grader-labextension==0.2.9
+      - grader-labextension==0.2.10
       - traitlets==5.9.0
